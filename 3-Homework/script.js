@@ -35,13 +35,13 @@ function writePassword() {
              alert('your option is not valid, check your spelling')
     }
     }
-  
+
     promptUppercase()
 
     var lowerCase;
 
     function promptLowercase () {
-    
+
         lowerCase = prompt("Do you want lowercase characters, please answer 'yes' or 'no' ");
 
     if ( lowerCase === 'yes'  || lowerCase === 'YES' ) {
@@ -52,13 +52,13 @@ function writePassword() {
              alert('your option is not valid, check your spelling')
     }
     }
-  
+
     promptLowercase()
 
     var symbol;
 
     function promptSymbol () {
-    
+
         symbol = prompt("Do you want symbol characters, please answer 'yes' or 'no' ");
 
         if ( symbol === 'yes'  || symbol === 'YES' ) {
@@ -69,9 +69,9 @@ function writePassword() {
                 alert('your option is not valid, check your spelling')
         }
     }
-  
+
     promptSymbol()
-    
+
 
   console.log(length)
   console.log(upperCase)
@@ -105,7 +105,5 @@ function getRandomNumber() {
 function getRandomSymbol() {
 	const symbols = '!@#$%^&*(){}[]=<>/,.'
     return symbols[Math.floor(Math.random() * symbols.length)];
-   
+
 }
-
-
