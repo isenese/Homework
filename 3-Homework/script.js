@@ -124,14 +124,14 @@ function generatePassword (){
     }
 
 
-function randomNumber () {
+function randomRandom () {
     return Math.floor(Math.random()* Math.floor (myFunctions.length));
 }
 
     var result = [] 
     
     for (i=0; i < length-1; i++){
-        result.push(myFunctions[randomNumber()]())
+        result.push(myFunctions[randomRandom()]())
     }
 return result.join('')
 }
