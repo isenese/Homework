@@ -1,18 +1,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Fuctions for generate ramdom values
+// Fuctions for generate ramdom values for Lower, Upper, Number Symbol Cases.
 
 function getRandomLower() {
-	return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);   //This fuction I found in internet
 }
 
 function getRandomUpper() {
-	return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+	return String.fromCharCode(Math.floor(Math.random() * 26) + 65);  //This fuction I found in internet
 }
 
 function getRandomNumber() {
-	return +String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+	return +String.fromCharCode(Math.floor(Math.random() * 10) + 48);  //This fuction I found in internet
 }
 
 function getRandomSymbol() {
@@ -22,7 +22,7 @@ function getRandomSymbol() {
 }
 
 
-// Write password to the #password input
+// Write password to the #password input // I Put all the function asociated with a propmt, asking for the especial homerwork condition
 function writePassword() {
 
   var length;
@@ -106,9 +106,9 @@ function writePassword() {
     promptNumberCase()
 
 
-// Password Generation
+// Password Generation + All the values generated with my previuos Functions know are called to a new var myFunctionsArray
 function generatePassword (){ 
-    var myFunctions = []
+    var myFunctionsArray = []
 
     if (lowerCase === "yes" || lowerCase === "YES"  ){
         myFunctions.push(getRandomLower)
@@ -123,15 +123,15 @@ function generatePassword (){
         myFunctions.push(getRandomSymbol)
     }
 
-
+// Previuos to called to myFunctionsArray this fuction generate a random position in the array with the value from the value genrator Fuctions. 
 function randomRandom () {
-    return Math.floor(Math.random()* Math.floor (myFunctions.length));
+    return Math.floor(Math.random()* Math.floor (myFunctionsArray.length));
 }
 
     var result = [] 
     
     for (i=0; i < length-1; i++){
-        result.push(myFunctions[randomRandom()]())
+        result.push(myFunctionsArray[randomRandom()]())
     }
 return result.join('')
 }
