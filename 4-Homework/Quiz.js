@@ -1,4 +1,4 @@
-// LocalStorage: localStorage.setItem(key Or name , content)
+// LocalStorage: localStorage.setItem(key Or name , content or value)
 //SET
 //GET
 
@@ -10,30 +10,172 @@
 // const nameLocalStorage =localStorage.getItem("nombreUsuario"); // indicar la Key
 // console.log(nameLocalStorage);
 
+// var questions = ["question 1", "question2"];
+// var answers = ["answer 1", "answer 2"];
 
-
-
-
-
+//localStorage.setItem("opD", optionD3.text()); example
 
 
 //Warp fuction Jquery
 
+
+
 $(document).ready(function () {         
+   
+   var score =0;      
 
-$("#idQ").addClass('text-danger');
+//Star Button
+const startB = $("#starBtm").on("click",function () { 
+   $("#question1").show();
+   $("question2").hide();
+   $("question3").hide();
+ 
+  
 
 
-const startB = $("#starBtm").click(function () { 
-    alert("bottom clicked.");
-localStorage.setItem("startBottom", startB.text());
+});
+
+
+// Option Buttoms Question1
+
+const optionA1 = $("#A1").on("click",function () {
+      
+      $("#answer1").append("Correct");
+      $("#question1").hide();
+      $("#question2").show();
+      score +=1;
+      $("#score").append(score);  
+      $("#score").hide(score);
+      
+})
+
+
+
+
+const optionB1 =$("#B1").on("click",function () {
+    $("#answer1").append("Incorrect");
+    $("#question1").hide();
+    $("#question2").show();
+    $("#score").append();
+    $("#score").hide();
+
+})
+
+const optionC1 = $("#C1").on("click",function () {
+   $("#answer1").append("Incorrect");
+   $("#question1").hide();
+   $("#question2").show();
+   $("#score").append();
+    $("#score").hide(); 
+})
+
+const optionD1 = $("#D1").on("click",function () {
+    $("#answer1").append("Incorrect");
+    $("#question1").hide();
+    $("#question2").show();
+    $("#score").append();
+    $("#score").hide(); 
+    
+})
+
+
+// Option Buttoms Question2
+const optionA2 = $("#A2").on("click",function () { 
+    $("#answer2").append("Incorrect"); 
+    $("#question2").hide();
+    $("#question3").show();
+    $("#score").append();
+    $("#score").hide(); 
+   
+ })
+ 
+ const optionB2 =$("#B2").on("click",function () {  
+    $("#answer2").append("Incorrect"); 
+    $("#question2").hide();
+    $("#question3").show();
+    $("#score").append();
+    $("#score").hide();  
+    
+ 
+ })
+ 
+ 
+ const optionC2 = $("#C2").on("click",function () {
+    $("#answer2").append("correct");
+    $("#question2").hide();
+    $("#question3").show();
+   score +=1;
+   $("#score").append(score);  
+   $("#score").hide(score);
+ })
+ 
+ const optionD2 = $("#D2").on("click",function () {
+   $("#answer2").append("Incorrect");
+   $("#question2").hide();
+   $("#question3").show();
+   $("#score").append();
+    $("#score").hide();   
+  
+ })
+ 
+
+
+// Option Buttoms Question3
+const optionA3 = $("#A3").on("click",function () { 
+   $("#answer3").append("Incorrect"); 
+   $("#question3").hide();
+   $("#score").append();
+    $("#score").hide(); 
+ 
+
+ })
+ 
+ const optionB3 =$("#B3").on("click",function () {  
+    $("#answer3").append("Correct"); 
+    $("#question3").hide();
+    score +=1; 
+    $("#score").append(score);  
+    $("#score").show(score);
+ 
+ 
+ })
+ 
+ 
+ const optionC3 = $("#C3").on("click",function () {
+    $("#answer3").append("Incorrect");
+    $("#question3").hide();
+    $("#score").append();
+    $("#score").show();
+
+ 
+ })
+ 
+ const optionD3 = $("#D3").on("click",function () {
+    $("#answer3").append("Incorrect");
+    $("#question3").hide();
+    $("#score").append();
+    $("#score").show();
+
+
+ })
+
+
+
+
+
+ 
+
+  
+   
+   
+   
+
+   
+      
+
+
 
 });
 
 
-
-
-
-
-});
 

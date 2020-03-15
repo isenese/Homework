@@ -1,0 +1,38 @@
+
+ @-ms-viewport{
+    width: device-width;
+  } 
+
+.container {
+
+    margin-bottom:50px;
+
+}
+
+#question1 {
+    display: none;
+}
+
+
+#question2 {
+    display: none;
+}
+
+#question3 {
+    display: none;
+}
+
+
+#answerDisplay {
+
+max-width: 100%;
+
+}
+
+
+#finalScore, #answerDisplay, #score, #email {
+
+text-align: center;
+
+
+}

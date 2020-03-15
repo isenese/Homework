@@ -5,43 +5,77 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
      <link rel="stylesheet" type="text/css" href="Quiz.css">
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+     <script src = "Quiz.js"></script>
+
     <title>Document</title>
 </head>
 <body>
    
 <div class="container" id = "bigContainer">
-    <h1 class="display-4" id="idQ">Quiz</h1>
-    <h2 class="CodingQuiz">Coding Quiz Chanlenge!!! </h2>
-    <p>Try to answer the following questions. <br> Intruction: Time limit 10seg per questions</p>
-    <div id="qImage"><img src="https://media.giphy.com/media/SqrcahfStt3IKkc0IX/giphy.gif"></div>
-    <button type="button" class="btn-outline-success" id="starBtm">Start Quiz!</button>
-    <div id="question"><p>Questions</p></div>
-    <div id ="counter">10seg</div>
-    <div id="timeGauge"></div>
+    &nbsp;
+    <h2 class="CodingQuiz"><center>Coding Quiz Chanlenge</center></h2>
+    <center>Try to answer the following questions</center><br>
+    <div id="qImage"><center><img src="https://media.giphy.com/media/SqrcahfStt3IKkc0IX/giphy.gif"></center></div>
+   &nbsp;
+    <center><button type="button" class="btn btn-success btn-lg" id="starBtm">Start Quiz!</button></center>
+    &nbsp;
 
-<div class="container" id="bigContainer2">
-    <div id ="Options"></div>
-    <div class="Option-A" id="A"><h2>A</h2></div><br>
-    <div class="Option-B" id="B"><h2>B</h2></div><br>
-    <div class="Option-C" id="C"><h2>C</h2></div><br>
+ <div class="container" id="question1">
+    <center><p class="text-light bg-dark">QUESTION 1. What is the proper format for an HTML tag?</p></center>
+    <center><h2>OPTIONS</h2></center>
+    <div class="row row-cols-2">
+        <button type="button" class="btn btn-outline-primary" id="A1">A.<></> </button>
+        <button type="button" class="btn btn-outline-danger" id="B1">B.<<>> </button>
+        <button type="button" class="btn btn-outline-warning" id="C1">C./</ </button>
+        <button type="button" class="btn btn-outline-info" id="D1">D.>/ </button>
+    </div>
+    </div>
+
+ <div class="container" id="question2">
+        <center><p class="text-light bg-dark">QUESTION 2.Inside which HTML element do we put the JavaScript?</p></center>
+        <center><h2>OPTIONS</h2></center>
+        <div class="row row-cols-2">
+            <button type="button" class="btn btn-outline-primary" id="A2">A.script</button>
+            <button type="button" class="btn btn-outline-danger" id="B2">B.js</button>
+            <button type="button" class="btn btn-outline-warning" id="C2">C.javascritp</button>
+            <button type="button" class="btn btn-outline-info" id="D2">D.scripting</button>
+    </div>
+    </div>
+
+ <div class="container" id="question3">
+        <center><p class="text-light bg-dark">QUESTION 3. How do you write "Hello World" in an alert box?</p></center>
+        <center><h2>OPTIONS</h2></center>
+        <div class="row row-cols-2">
+            <button type="button" class="btn btn-outline-primary" id="A3">A.msgbox("hello word")</button>
+            <button type="button" class="btn btn-outline-danger" id="B3">B.alertbox("hello word")</button>
+            <button type="button" class="btn btn-outline-warning" id="C3">C.msg("hello word")</button>
+            <button type="button" class="btn btn-outline-info" id="D3">D.alert("hello word")</button>
+        </div>
+</div>
+    
+   <div class="container"  text-center id="answerDisplay">
+    <div class="row">
+      <div class="col-sm" id="answer1"></div>
+      <div class="col-sm" id="answer2"></div>
+      <div class="col-sm" id="answer3"></div>
+    </div>
+    </div>
+
+    <div class="container" id="finalScore">
+        <center><h2>SCORE:</h2></center>
+           <div id="score"></div><br><br>
+           <input id="email" placeholder="email"><br><br>
+            <input type="submit" value="Submit">
+          </form>
+    </div>
+
+
+    <footer>
+        <span class="d-block p-2 bg-dark text-white"><p><center>@Copyright-Alvaro Nieto</center><p></span>
+    </footer>
 </div>
 
-<div class="container" id="bigContainer3">
-<div id="progress"></div>
-
-
-</div>
-
-
-
-
-</div> //bigContainer
-
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
-
-  <script src = "Quiz.js"></script>
 
 </body>
 </html>
