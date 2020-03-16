@@ -2,6 +2,7 @@
 //SET
 //GET
 
+const newLocal = "submit";
 
 // const name = "Alvaro";
 // localStorage.setItem("nombreUsuario", name);  // name inventar , value almacenado en la variable
@@ -10,8 +11,7 @@
 // const nameLocalStorage =localStorage.getItem("nombreUsuario"); // indicar la Key
 // console.log(nameLocalStorage);
 
-// var questions = ["question 1", "question2"];
-// var answers = ["answer 1", "answer 2"];
+
 
 //localStorage.setItem("opD", optionD3.text()); example
 
@@ -44,7 +44,7 @@ const optionA1 = $("#A1").on("click",function () {
       $("#question1").hide();
       $("#question2").show();
       score +=1;
-      $("#score").append(score);  
+      $("#score").append();  
       $("#score").hide(score);
       
 })
@@ -101,12 +101,12 @@ const optionA2 = $("#A2").on("click",function () {
  
  
  const optionC2 = $("#C2").on("click",function () {
-    $("#answer2").append("correct");
+    $("#answer2").append("Correct");
     $("#question2").hide();
     $("#question3").show();
-   score +=1;
-   $("#score").append(score);  
-   $("#score").hide(score);
+      score +=1;
+    $("#score").append();  
+    $("#score").hide(score);
  })
  
  const optionD2 = $("#D2").on("click",function () {
@@ -114,7 +114,7 @@ const optionA2 = $("#A2").on("click",function () {
    $("#question2").hide();
    $("#question3").show();
    $("#score").append();
-    $("#score").hide();   
+   $("#score").hide(score);   
   
  })
  
@@ -124,8 +124,8 @@ const optionA2 = $("#A2").on("click",function () {
 const optionA3 = $("#A3").on("click",function () { 
    $("#answer3").append("Incorrect"); 
    $("#question3").hide();
-   $("#score").append();
-    $("#score").hide(); 
+   $("#score").append(score);
+    $("#score").show(score); 
  
 
  })
@@ -144,8 +144,8 @@ const optionA3 = $("#A3").on("click",function () {
  const optionC3 = $("#C3").on("click",function () {
     $("#answer3").append("Incorrect");
     $("#question3").hide();
-    $("#score").append();
-    $("#score").show();
+    $("#score").append(score);
+    $("#score").show(score);
 
  
  })
@@ -153,25 +153,22 @@ const optionA3 = $("#A3").on("click",function () {
  const optionD3 = $("#D3").on("click",function () {
     $("#answer3").append("Incorrect");
     $("#question3").hide();
-    $("#score").append();
-    $("#score").show();
+    $("#score").append(score);
+    $("#score").show(score);
 
 
  })
 
 
+//Submit button
+
+ $("#submit").on("click", function(){
+   localStorage.setItem("scoreValue", "score"); 
+   localStorage.setItem("emailValue", "email")
+   localStorage.setItem("submitBtm", "submit"); 
 
 
-
- 
-
-  
-   
-   
-   
-
-   
-      
+ })
 
 
 
