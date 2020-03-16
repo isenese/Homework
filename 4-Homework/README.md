@@ -40,3 +40,14 @@ You are required to submit the following for review:
 
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+
+
+My coments
+
+Thanks Josh for the last solutions.
+
+The only thing I can't do is go to another HTML page. Last part of the Assets vide. I revolve the problem using alerts and store the values like Josh told me.
+
+Thanks 
+Al
