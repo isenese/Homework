@@ -2,7 +2,7 @@
 //SET
 //GET
 
-const newLocal = "submit";
+
 
 // const name = "Alvaro";
 // localStorage.setItem("nombreUsuario", name);  // name inventar , value almacenado en la variable
@@ -126,7 +126,8 @@ const optionA3 = $("#A3").on("click",function () {
    $("#question3").hide();
    $("#score").append(score);
     $("#score").show(score); 
- 
+    localStorage.setItem("scoreValue", JSON.stringify(score));
+    localStorage.setItem("emailValue", $("#email").val());
 
  })
  
@@ -136,7 +137,8 @@ const optionA3 = $("#A3").on("click",function () {
     score +=1; 
     $("#score").append(score);  
     $("#score").show(score);
- 
+    localStorage.setItem("scoreValue", JSON.stringify(score));
+    localStorage.setItem("emailValue", $("#email").val());
  
  })
  
@@ -146,7 +148,8 @@ const optionA3 = $("#A3").on("click",function () {
     $("#question3").hide();
     $("#score").append(score);
     $("#score").show(score);
-
+    localStorage.setItem("scoreValue", JSON.stringify(score));
+    localStorage.setItem("emailValue", $("#email").val());
  
  })
  
@@ -155,24 +158,30 @@ const optionA3 = $("#A3").on("click",function () {
     $("#question3").hide();
     $("#score").append(score);
     $("#score").show(score);
-
+    localStorage.setItem("scoreValue", JSON.stringify(score));
+    localStorage.setItem("emailValue", $("#email").val());
 
  })
 
 
-//Submit button
+//Submit button  // This part dosen't work!!! I'd try to store the email and the scorea in Alert msg. 
 
+
+   
  $("#submit").on("click", function(){
-   localStorage.setItem("scoreValue", "score"); 
-   localStorage.setItem("emailValue", "email")
-   localStorage.setItem("submitBtm", "submit"); 
-
-
- })
-
+   var e-mail = $("#email").val()
+ alert("email =" + localStorage.getItem("emailValue"));
+ alert("score =" + localStorage.getItem("scoreValue"));
+});
 
 
 });
 
 
 
+// const nameLocalStorage =localStorage.getItem("nombreUsuario"); // indicar la Key
+// console.log(nameLocalStorage);
+
+
+
+// localStorage.setItem("opD", optionD3.text()); example
