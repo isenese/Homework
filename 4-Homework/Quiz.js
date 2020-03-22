@@ -27,8 +27,8 @@ $(document).ready(function () {
 //Star Button
 const startB = $("#starBtm").on("click",function () { 
    $("#question1").show();
-   $("question2").hide();
-   $("question3").hide();
+   $("#question2").hide();
+   $("#question3").hide();
  
   
 
@@ -169,7 +169,7 @@ const optionA3 = $("#A3").on("click",function () {
 
    
  $("#submit").on("click", function(){
-   var e-mail = $("#email").val()
+   var mail = $("#email").val()
  alert("email =" + localStorage.getItem("emailValue"));
  alert("score =" + localStorage.getItem("scoreValue"));
 });
